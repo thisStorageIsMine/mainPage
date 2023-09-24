@@ -146,9 +146,10 @@ box-sizing: border-box;
     width: 100%;
     max-width: 1080px;
     background: #1D203E;
+
     height: 100%;
-    max-height: 844px;
-    
+    max-height: 843.141px;
+    overflow-y: scroll;
     position: relative;
 }
 .search-wrap{
@@ -277,4 +278,21 @@ input[type="search"]{
     padding-left: 12px;
     padding-right: 12px;
     margin-bottom: 100px;
+}
+
+.gap-16{
+    gap: 16px;
+}
+.all-cards{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin-top: 32px;
+    gap: 8px;
+}
+.all-cards > .update-card{
+    margin-top: 4px;
+}
+.all-cards > .popular-card {
+    margin-top: 6px;
 }
