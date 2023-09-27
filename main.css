@@ -48,6 +48,14 @@ box-sizing: border-box;
     font-weight: 600;
     line-height: normal;
 }
+.article-font{
+    color: #FFF;
+    font-family: SF Pro Display;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
 .flex-row-center{
     display: flex;
     justify-content: center;
@@ -146,10 +154,8 @@ box-sizing: border-box;
     width: 100%;
     max-width: 1080px;
     background: #1D203E;
-
     height: 100%;
     max-height: 843.141px;
-    overflow-y: scroll;
     position: relative;
 }
 .search-wrap{
@@ -290,9 +296,27 @@ input[type="search"]{
     margin-top: 32px;
     gap: 8px;
 }
-.all-cards > .update-card{
+.all-cards > :is(.update-card, .popular-card){
     margin-top: 4px;
 }
-.all-cards > .popular-card {
-    margin-top: 6px;
+
+
+.article-wrap{
+    margin-top: 50px;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 57px;
+}
+.article-container{
+    width: min(100%,990px);
+    height: 100%;
+    min-height: 475px;
+    border-radius: 16px;
+    background: #2C2F48; 
+    overflow-y: scroll;   
+    padding: 30px 20px;
 }
