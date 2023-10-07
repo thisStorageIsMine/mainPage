@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+        *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  background-color:#333;
+}
+.btn-to-open{
+  
+  position: relative;
+  top: 50%;
+  left: 46%;
+  cursor: pointer;
+
+  padding: 10px 15px;
+  background-color: #f7155f;
+  color: #fff;
+  border: none;
+  font-size: 1.3em;
+  outline: 4px solid white;
+  outline-offset: -10px;
+  transition: all 0.5s ease-out;
+}
+.btn-to-open:hover{
+  outline-offset: 5px;
+  background-color: #f715ff;
+  color: black;
+}
+
+
+
+
+
+.modal{
+  display:flex;
+  z-index: -1;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.7);
+  transition:  all 0.3s ease-in-out;
+}
+.modal__wrapper{
+  width: 400px;
+  border-radius: 12px; 
+  background-color: #fff;
+  padding: 24px;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.04), 0px 20px 24px -4px rgba(16, 24, 40, 0.10); 
+}
+
+.modal__photo{
+  height: 144px;
+  border-radius: 8px;
+background-image: url(https://www.google.com/imgres?imgurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FOIG.lVXjWwlHyIo4QdjnC1YE&tbnid=6sKp8knjp2usuM&vet=12ahUKEwj3iofS3eSBAxW6CRAIHe5qALwQMygWegQIARB4..i&imgrefurl=https%3A%2F%2Fwww.bing.com%2Fimages%2Fcreate%3FFORM%3DGENILP&docid=2PuKWxRHgCLHxM&w=1024&h=1024&itg=1&q=image&ved=2ahUKEwj3iofS3eSBAxW6CRAIHe5qALwQMygWegQIARB4), lightgray 50% / cover no-repeat;
+}
+
+
+.modal__content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 30px;
+}
+.modal__title{
+  color: #101828;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px; 
+ 
+}
+.modal__text{
+  color:  #475467;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px; 
+}
+
+
+
+
+.modal_buttons{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.modal_buttons > :is(button,input){
+  width: 144px;
+  padding: 10px;
+  border-radius: 8px; 
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05); 
+  cursor: pointer;
+}
+.modal__btn-cancel{
+  background-color: #fff;
+  border: 1px solid  #D0D5DD; 
+  font-size: 16px;
+
+  font-weight: 400;
+  line-height: 24px; 
+}
+.modal__btn-submit{
+  border: 1px solid #7F56D9;
+  background:  #7F56D9; 
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+    </style>
+</head>
+<body>
+    <button class="btn-to-open">
+        Открыть окно
+    </button>
+      
+      
+      
+      <div class="modal">
+        <form class="modal__wrapper">
+          <div class="modal__photo">
+            
+          </div>
+          <div class="modal__content">
+            <h4 class="modal__title">Title</h4>
+            <p class="modal__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quo commodi nemo, autem facere incidunt ullam cumque eum tempora. Obcaecati!</p>
+          </div>
+          <div class="modal_buttons">
+            <button class="modal__btn-cancel">
+              Ой, не
+            </button>
+            <input type="submit" value="Вступить" class="modal__btn-submit">
+          </div>
+        </form>
+      </div>
+
+      <script>
+        const btnToOpenModal = document.querySelector(".btn-to-open");
+        const modal = document.querySelector(".modal");
+        btnToOpenModal.addEventListener("click",()=>{
+            modal.style.zIndex = "100";
+            modal.style.opacity = "1";
+        });
+      </script>
+</body>
+</html>
