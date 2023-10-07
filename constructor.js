@@ -4,7 +4,8 @@ const cardStorages = document.querySelectorAll(".card-storage");
 const lastUpdatesList= document.querySelector(".last-updates-list");
 const communityStorage = document.querySelector(".carousel");
 const slickTrack = document.querySelectorAll(".slick-track");
-const lastUpdatesContainer = document.querySelector(".all-cards")
+const lastUpdatesContainer = document.querySelector(".last-updates-container");
+const communityContainer = document.querySelector(".community-container");
 
 //События перехода на статью
 
@@ -93,7 +94,8 @@ for(let communityId in communities){
         <p class="regular-font">8${communities[communityId].members} Участников</p>
         </div>
     `;
-    communityStorage.appendChild(create);
+    if(communityStorage)communityStorage.appendChild(create);
+    if(communityContainer) communityContainer.appendChild(create);
 }
 
 
