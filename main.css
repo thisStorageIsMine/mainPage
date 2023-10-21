@@ -5,22 +5,117 @@ box-sizing: border-box;
 }
 @keyframes background-spin{
     from{
-      background-position:  0% center;
+        background-position:  0% center;
     }
         
-    
+
     to{
-      background-position: -200% center ;
+        background-position: -200% center ;
     }
-  }
-  body{
+}
+body{
     width: 100%;
     height: 100vh;
     background: linear-gradient(to right, #7758D1 0%, #F7CBFD 50%,#7758D1 100% );
     background-size: 200%;
     animation: background-spin 30s linear infinite;
     overflow: hidden;
-  }
+}
+
+/* Начало модального окна */
+
+.modal {
+    display:flex;
+    z-index: -1;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.75);
+    transition:  all 0.3s ease-in-out;
+}
+.modal__wrapper {
+    width: 500px;
+    border-radius: 12px; 
+    background-color: rgba(44, 47, 72, 1);
+    padding: 24px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.04), 0px 20px 24px -4px rgba(16, 24, 40, 0.10); 
+}
+
+.modal__photo {
+    height: 250px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+
+.modal__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 30px;
+}
+
+.modal__title {
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px; 
+
+}
+
+.modal__text {
+    color:  #475467;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px; 
+}
+
+.modal_buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal_buttons > :is(button,input) {
+    width: 144px;
+    padding: 10px;
+    border-radius: 8px; 
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05); 
+    cursor: pointer;
+}
+
+.modal__btn-cancel {
+    background-color: #fff;
+    border: 1px solid  #D0D5DD; 
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px; 
+}
+
+.modal__btn-submit {
+    border: 1px solid #7F56D9;
+    background:  #7F56D9; 
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+/* Конец модального окна */
+
 
 .link-font{
     color: rgba(255, 255, 255, 0.55);
@@ -154,8 +249,8 @@ box-sizing: border-box;
     width: 100%;
     max-width: 1080px;
     background: #1D203E;
-    height: 100%;
-    max-height: 843.141px;
+    height: 843px;
+    max-height: 843px;
     position: relative;
     
 }
@@ -256,6 +351,12 @@ input[type="search"]{
     margin-top: 90px;
     
 }
+
+.popular-card > img {
+    height: 152px;
+    width: 162px;
+}
+
 .popular-card{
     border: 1px solid #01B7C5; 
     height: 130px;

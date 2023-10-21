@@ -7,7 +7,7 @@ const slickTrack = document.querySelectorAll(".slick-track");
 const lastUpdatesContainer = document.querySelector(".last-updates-container");
 const communityContainer = document.querySelector(".community-container");
 
-//События перехода на статью
+
 
 
 
@@ -66,11 +66,28 @@ for(let articleId in articles){
 }
 
 // Цикл для отрисовки сообществ
+const modalTitle = document.querySelector(".modal__title"),
+      modalText = document.querySelector(".modal__text"),
+      modalPhoto = document.querySelector(".modal__photo"),
+      modal = document.querySelector(".modal");
+
+modal.addEventListener("click",  (event) =>{
+    if(event.target.classList.contains("modal")){
+        modal.style.zIndex = "";
+        modal.style.opacity = "";
+    }
+});
+    
+
+    
 for(let communityId in communities){
     const create = document.createElement("div");
     create.classList.add("popular-card","card-link");
+    const title = communities[communityId].title,
+          photo = communities[communityId].img,
+          description = communities[communityId].description;
     create.innerHTML = `
-    <img src="imgs/Img.png" alt="" width="133px">
+    <img src="${photo}" alt="" width="133px">
     <svg width="219" height="152" viewBox="0 0 219 152" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_945_30)">
         <path d="M31.8585 152C16.2708 152 8.47699 152 6.22884 147.721C3.98069 143.441 8.63248 136.691 17.9361 123.19C28.1867 108.315 38 90.3316 38 76C38 61.4286 28.4995 43.764 18.4298 29.1335C8.98734 15.4144 4.26614 8.55492 6.51479 4.27747C8.76344 0 16.6487 0 32.4192 0H220V152H31.8585Z" fill="#393D5E"/>
@@ -89,11 +106,20 @@ for(let communityId in communities){
         </defs>
         </svg> 
         <div class="hub">
-        <h3 class="title-font">${communities[communityId].title}</h3>
-        <p class="regular-font hub_text">${communities[communityId].description}</p>
+        <h3 class="title-font">${title}</h3>
+        <p class="regular-font hub_text">${description}</p>
         <p class="regular-font">8${communities[communityId].members} Участников</p>
         </div>
     `;
+
+    create.addEventListener("click", function() {
+        modalTitle.textContent = title;
+        modalText.textContent  = description;
+        modalPhoto.src = photo;
+        modal.style.zIndex = "100";
+        modal.style.opacity = "1";
+        
+    });
     if(communityStorage)communityStorage.appendChild(create);
     if(communityContainer) communityContainer.appendChild(create);
 }

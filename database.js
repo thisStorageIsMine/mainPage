@@ -56,51 +56,61 @@ const communities = [
   {
     title: "Сообщество 1",
     description: "Описание сообщества 1",
+    img: "imgs/clem-onojeghuo-XW-Z9L930CY-unsplash.jpg",
     members: 1000
   },
   {
     title: "Сообщество 2",
     description: "Описание сообщества 2",
+    img: "imgs/clem-onojeghuo-XW-Z9L930CY-unsplash.jpg",
     members: 1500
   },
   {
     title: "Сообщество 3",
     description: "Описание сообщества 3",
+    img: "imgs/clem-onojeghuo-XW-Z9L930CY-unsplash.jpg",
     members: 800
   },
   {
     title: "Сообщество 4",
     description: "Описание сообщества 4",
+    img: "imgs/clem-onojeghuo-XW-Z9L930CY-unsplash.jpg",
     members: 2000
   },
   {
     title: "Сообщество 5",
     description: "Описание сообщества 5",
+    img: "imgs/clem-onojeghuo-XW-Z9L930CY-unsplash.jpg",
     members: 1200
   },
   {
     title: "Сообщество 6",
     description: "Описание сообщества 6",
+    img: "imgs/clem-onojeghuo-XW-Z9L930CY-unsplash.jpg",
     members: 700
   },
   {
     title: "Сообщество 7",
     description: "Описание сообщества 7",
+    img: "imgs/clem-onojeghuo-XW-Z9L930CY-unsplash.jpg",
     members: 900
   },
   {
     title: "Сообщество 8",
     description: "Описание сообщества 8",
+    img: "imgs/clem-onojeghuo-XW-Z9L930CY-unsplash.jpg",
     members: 1800
   },
   {
     title: "Сообщество 9",
     description: "Описание сообщества 9",
+    img: "imgs/clem-onojeghuo-XW-Z9L930CY-unsplash.jpg",
     members: 600
   },
   {
     title: "Сообщество 10",
     description: "Описание сообщества 10",
+    img: "imgs/clem-onojeghuo-XW-Z9L930CY-unsplash.jpg",
     members: 3000
   }
 ];
