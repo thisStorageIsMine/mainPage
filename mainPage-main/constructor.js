@@ -15,6 +15,24 @@ const articles = [
   }
 ];
 
+function getMonthName(monthNumber) {
+  const months = {
+    0: "Января",
+    1: "Февраля",
+    2: "Марта",
+    3: "Апреля",
+    4: "Мая",
+    5: "Июня",
+    6: "Июля",
+    7: "Августа",
+    8: "Сентября",
+    9: "Октября",
+    10: "Ноября",
+    11: "Декабря"
+  };
+  
+  return months[monthNumber];
+}
 
 const storage = document.querySelector('.storage');
 const book_storage = document.querySelector('.book_storage');
@@ -66,7 +84,7 @@ for (let i in articles) {
       <p class="title-font" style="font-size:14px;">${articles[i].title}</p>
       <p class="regular-font" style="font-size:12px;position: relative;
       right: -50%;">${articles[i].autorName} ${articles[i].autorSurname}</p>
-      <p class='time regular-font' style="font-size:12px">${data.getHours()}:${data.getMinutes()}</p>
+      <p class='time regular-font' style="font-size:12px">${data.getDate()} ${getMonthName(data.getMonth())}</p>
       `;
       storage.prepend(storage_create);
       event.stopPropagation();
