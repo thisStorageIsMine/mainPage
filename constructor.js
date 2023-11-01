@@ -16,6 +16,7 @@ const communityContainer = document.querySelector(".community-container");
 for(let articleId in articles){
     const create = document.createElement("div");
     create.classList.add("update-card","card-link");
+    create.style.width = "320px";
     create.setAttribute("data-id",articleId);
     create.innerHTML = `
     
