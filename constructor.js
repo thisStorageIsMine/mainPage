@@ -71,6 +71,8 @@ const modalTitle = document.querySelector(".modal__title"),
       modalPhoto = document.querySelector(".modal__photo"),
       modal = document.querySelector(".modal");
 
+
+
 modal.addEventListener("click",  (event) =>{
     if(event.target.classList.contains("modal")){
         modal.style.zIndex = "";
@@ -124,46 +126,10 @@ for(let communityId in communities){
     if(communityContainer) communityContainer.appendChild(create);
 }
 
+const burger = document.querySelector(".burger");
+const aside = document.querySelector(".nav-wrap");
 
-/*
-<div class="popular-card card-link">
-    <img src="imgs/Img.png" alt="" width="133px">
-    <svg width="219" height="152" viewBox="0 0 219 152" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g filter="url(#filter0_d_945_30)">
-        <path d="M31.8585 152C16.2708 152 8.47699 152 6.22884 147.721C3.98069 143.441 8.63248 136.691 17.9361 123.19C28.1867 108.315 38 90.3316 38 76C38 61.4286 28.4995 43.764 18.4298 29.1335C8.98734 15.4144 4.26614 8.55492 6.51479 4.27747C8.76344 0 16.6487 0 32.4192 0H220V152H31.8585Z" fill="#393D5E"/>
-        </g>
-        <defs>
-        <filter id="filter0_d_945_30" x="-14.3306" y="-21" width="254.331" height="192" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-        <feOffset dy="-1"/>
-        <feGaussianBlur stdDeviation="10"/>
-        <feComposite in2="hardAlpha" operator="out"/>
-        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
-        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_945_30"/>
-        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_945_30" result="shape"/>
-        </filter>
-        </defs>
-        </svg> 
-        <div class="hub">
-        <h3 class="title-font">Title</h3>
-        <p class="regular-font hub_text">An NFT community so that everyone can share their NFTs.</p>
-        <p class="regular-font">887,789 Members</p>
-        </div>
-</div>
-
-
-*/
-
-
-
-// for(let cardStorage of cardStorages){
-//     cardStorage.addEventListener("click", event=>{
-//         let card = event.target.closest(".card-link");
-//         if(card){
-//             window.location.href=`article.html?id=${card.dataset.id}`;
-//         }
-//     });
-// }
-
-
+burger.addEventListener("click", function() {
+    aside.classList.toggle("open");
+    burger.classList.toggle("open-burger");
+});
